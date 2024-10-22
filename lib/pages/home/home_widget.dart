@@ -284,7 +284,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                       'Poppins',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primary,
+                                                                      .primaryText,
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
@@ -294,7 +294,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                 .visibility_off,
                                                             color: FlutterFlowTheme
                                                                     .of(context)
-                                                                .primary,
+                                                                .primaryText,
                                                             size: 24.0,
                                                           ),
                                                         ],
@@ -310,7 +310,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                       'Poppins',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primary,
+                                                                      .primaryText,
                                                                   fontSize:
                                                                       15.0,
                                                                   letterSpacing:
@@ -400,7 +400,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                         'Poppins',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .primary,
+                                                                        .primaryText,
                                                                     letterSpacing:
                                                                         0.0,
                                                                   ),
@@ -410,7 +410,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                   .visibility_off,
                                                               color: FlutterFlowTheme
                                                                       .of(context)
-                                                                  .primary,
+                                                                  .primaryText,
                                                               size: 24.0,
                                                             ),
                                                           ],
@@ -425,7 +425,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                     'Poppins',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primary,
+                                                                    .primaryText,
                                                                 fontSize: 15.0,
                                                                 letterSpacing:
                                                                     0.0,
@@ -512,7 +512,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                     'Poppins',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primary,
+                                                                    .primaryText,
                                                                 letterSpacing:
                                                                     0.0,
                                                               ),
@@ -522,7 +522,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                       color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .primary,
+                                                              .primaryText,
                                                       size: 24.0,
                                                     ),
                                                   ],
@@ -537,7 +537,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primary,
+                                                                .primaryText,
                                                         fontSize: 15.0,
                                                         letterSpacing: 0.0,
                                                         fontWeight:
@@ -613,7 +613,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                                       'Poppins',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primary,
+                                                                      .primaryText,
                                                                   letterSpacing:
                                                                       0.0,
                                                                 ),
@@ -623,7 +623,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
-                                                                .primary,
+                                                                .primaryText,
                                                         size: 24.0,
                                                       ),
                                                     ],
@@ -637,7 +637,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                           fontFamily: 'Poppins',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primary,
+                                                              .primaryText,
                                                           fontSize: 15.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -683,7 +683,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                           fontFamily: 'Poppins',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primary,
+                                                              .primaryText,
                                                           fontSize: 15.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -833,7 +833,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 5.0, 0.0, 20.0),
+                              0.0, 1.0, 0.0, 29.0),
                           child: Builder(
                             builder: (context) {
                               final varpro = ProductsCall.productpath(
@@ -1139,7 +1139,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                           fontFamily: 'Poppins',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primary,
+                                                              .primaryText,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1189,7 +1189,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                           fontFamily: 'Poppins',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primary,
+                                                              .primaryText,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1239,7 +1239,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                           fontFamily: 'Poppins',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primary,
+                                                              .primaryText,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
@@ -1289,7 +1289,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                                           fontFamily: 'Poppins',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .primary,
+                                                              .primaryText,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
                                                               FontWeight.normal,
