@@ -1,8 +1,13 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'cart_model.dart';
 export 'cart_model.dart';
 
@@ -33,8 +38,8 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 0.0.ms,
             duration: 1270.0.ms,
-            begin: const Offset(0.0, -34.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, -34.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -45,8 +50,8 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 0.0.ms,
             duration: 1190.0.ms,
-            begin: const Offset(0.0, 55.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 55.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -57,8 +62,8 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 0.0.ms,
             duration: 1510.0.ms,
-            begin: const Offset(0.0, 70.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 70.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -82,7 +87,7 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 10.0),
+            padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 10.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -90,7 +95,7 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -113,7 +118,7 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -129,7 +134,7 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: EdgeInsets.all(10.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -147,7 +152,7 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 5.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -178,7 +183,7 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
                                                 ],
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 5.0, 0.0),
                                                 child: Row(
@@ -188,7 +193,7 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     5.0,
@@ -242,7 +247,7 @@ class _CartWidgetState extends State<CartWidget> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,

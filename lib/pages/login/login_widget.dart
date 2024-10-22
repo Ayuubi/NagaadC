@@ -3,8 +3,12 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
@@ -49,15 +53,15 @@ class _LoginWidgetState extends State<LoginWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 60.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 60.0),
+            end: Offset(0.0, 0.0),
           ),
           TiltEffect(
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(-0.349, 0),
-            end: const Offset(0, 0),
+            begin: Offset(-0.349, 0),
+            end: Offset(0, 0),
           ),
         ],
       ),
@@ -82,7 +86,7 @@ class _LoginWidgetState extends State<LoginWidget>
           backgroundColor: FlutterFlowTheme.of(context).primary,
           automaticallyImplyLeading: false,
           title: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Text(
               'Login\n',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -93,7 +97,7 @@ class _LoginWidgetState extends State<LoginWidget>
                   ),
             ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
@@ -114,7 +118,7 @@ class _LoginWidgetState extends State<LoginWidget>
                         'assets/images/DALLE_2024-10-20_14.05.44_-_A_high-quality_mobile_background_image_for_a_company_that_offers_restaurant_and_wedding_hall_services._The_upper_part_of_the_design_should_feature_a_l.webp',
                       ).image,
                     ),
-                    gradient: const LinearGradient(
+                    gradient: LinearGradient(
                       colors: [
                         Color(0xFFFFFDFD),
                         Color(0xFF39271E),
@@ -131,35 +135,35 @@ class _LoginWidgetState extends State<LoginWidget>
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
-                          const Color(0x00FFFFFF),
+                          Color(0x00FFFFFF),
                           FlutterFlowTheme.of(context).secondaryBackground
                         ],
-                        stops: const [0.0, 1.0],
-                        begin: const AlignmentDirectional(0.0, -1.0),
-                        end: const AlignmentDirectional(0, 1.0),
+                        stops: [0.0, 1.0],
+                        begin: AlignmentDirectional(0.0, -1.0),
+                        end: AlignmentDirectional(0, 1.0),
                       ),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 16.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 16.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
-                          child: SizedBox(
+                          child: Container(
                             width: double.infinity,
                             child: TextFormField(
                               controller: _model.txtusernameTextController,
                               focusNode: _model.txtusernameFocusNode,
                               autofocus: true,
-                              autofillHints: const [AutofillHints.email],
+                              autofillHints: [AutofillHints.email],
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: 'Username',
@@ -201,7 +205,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                 ),
                                 filled: true,
                                 fillColor: Colors.white,
-                                contentPadding: const EdgeInsets.all(24.0),
+                                contentPadding: EdgeInsets.all(24.0),
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -220,15 +224,15 @@ class _LoginWidgetState extends State<LoginWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 16.0),
-                          child: SizedBox(
+                          child: Container(
                             width: double.infinity,
                             child: TextFormField(
                               controller: _model.txtpasswordTextController,
                               focusNode: _model.txtpasswordFocusNode,
                               autofocus: false,
-                              autofillHints: const [AutofillHints.password],
+                              autofillHints: [AutofillHints.password],
                               obscureText: !_model.txtpasswordVisibility,
                               decoration: InputDecoration(
                                 labelText: 'Password',
@@ -270,7 +274,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                 ),
                                 filled: true,
                                 fillColor: Colors.white,
-                                contentPadding: const EdgeInsets.all(24.0),
+                                contentPadding: EdgeInsets.all(24.0),
                                 suffixIcon: InkWell(
                                   onTap: () => safeSetState(
                                     () => _model.txtpasswordVisibility =
@@ -300,9 +304,9 @@ class _LoginWidgetState extends State<LoginWidget>
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: FFButtonWidget(
                               onPressed: () async {
@@ -329,7 +333,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      duration: const Duration(milliseconds: 4200),
+                                      duration: Duration(milliseconds: 4200),
                                       backgroundColor:
                                           FlutterFlowTheme.of(context).primary,
                                     ),
@@ -342,20 +346,20 @@ class _LoginWidgetState extends State<LoginWidget>
                               options: FFButtonOptions(
                                 width: 230.0,
                                 height: 65.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Poppins',
-                                      color: const Color(0xFFF6F6F6),
+                                      color: Color(0xFFF6F6F6),
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 3.0,
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),

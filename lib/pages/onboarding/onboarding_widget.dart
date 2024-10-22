@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'onboarding_model.dart';
 export 'onboarding_model.dart';
 
@@ -38,8 +40,8 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF14181B),
-        body: SizedBox(
+        backgroundColor: Color(0xFF14181B),
+        body: Container(
           width: double.infinity,
           height: MediaQuery.sizeOf(context).height * 1.0,
           child: Stack(
@@ -53,7 +55,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 1.0,
                     decoration: BoxDecoration(
-                      color: const Color(0xFF14181B),
+                      color: Color(0xFF14181B),
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: Image.asset(
@@ -64,14 +66,14 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     child: Container(
                       width: 100.0,
                       height: MediaQuery.sizeOf(context).height * 1.0,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Color(0x990F1113),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Padding(
+                          Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 30.0),
                             child: Row(
@@ -81,7 +83,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 120.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -106,7 +108,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 70.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -120,9 +122,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                   options: FFButtonOptions(
                                     width: 240.0,
                                     height: 60.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -135,7 +137,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                     elevation: 2.0,
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -153,7 +155,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 1.0,
                     decoration: BoxDecoration(
-                      color: const Color(0xFF14181B),
+                      color: Color(0xFF14181B),
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: Image.asset(
@@ -164,7 +166,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     child: Container(
                       width: 100.0,
                       height: MediaQuery.sizeOf(context).height * 1.0,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Color(0x990F1113),
                       ),
                       child: Column(
@@ -172,7 +174,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 400.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -197,7 +199,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 70.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -211,9 +213,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                   options: FFButtonOptions(
                                     width: 240.0,
                                     height: 60.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -226,7 +228,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                     elevation: 2.0,
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -244,7 +246,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: MediaQuery.sizeOf(context).height * 1.0,
                     decoration: BoxDecoration(
-                      color: const Color(0xFF14181B),
+                      color: Color(0xFF14181B),
                       image: DecorationImage(
                         fit: BoxFit.cover,
                         image: Image.asset(
@@ -255,14 +257,14 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     child: Container(
                       width: 100.0,
                       height: MediaQuery.sizeOf(context).height * 1.0,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Color(0x990F1113),
                       ),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Padding(
+                          Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 30.0),
                             child: Row(
@@ -272,7 +274,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 400.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -297,7 +299,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 70.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -311,9 +313,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                   options: FFButtonOptions(
                                     width: 240.0,
                                     height: 60.0,
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: FlutterFlowTheme.of(context).primary,
                                     textStyle: FlutterFlowTheme.of(context)
@@ -326,7 +328,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                     elevation: 2.0,
-                                    borderSide: const BorderSide(
+                                    borderSide: BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
@@ -343,9 +345,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                 ],
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 200.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 200.0),
                   child: smooth_page_indicator.SmoothPageIndicator(
                     controller: _model.pageViewController ??=
                         PageController(initialPage: 0),
@@ -354,7 +356,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                     onDotClicked: (i) async {
                       await _model.pageViewController!.animateToPage(
                         i,
-                        duration: const Duration(milliseconds: 500),
+                        duration: Duration(milliseconds: 500),
                         curve: Curves.ease,
                       );
                       safeSetState(() {});
@@ -365,7 +367,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                       radius: 40.0,
                       dotWidth: 10.0,
                       dotHeight: 10.0,
-                      dotColor: const Color(0xFFD9D9D9),
+                      dotColor: Color(0xFFD9D9D9),
                       activeDotColor: FlutterFlowTheme.of(context).primary,
                       paintStyle: PaintingStyle.fill,
                     ),
