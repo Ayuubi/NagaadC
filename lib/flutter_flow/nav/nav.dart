@@ -1,19 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
 
 import '/index.dart';
 import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -48,7 +42,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : OnboardingWidget(),
+          : const OnboardingWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -63,43 +57,43 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : OnboardingWidget(),
+              : const OnboardingWidget(),
           routes: [
             FFRoute(
               name: 'Onboarding',
               path: 'onboarding',
-              builder: (context, params) => OnboardingWidget(),
+              builder: (context, params) => const OnboardingWidget(),
             ),
             FFRoute(
               name: 'Home',
               path: 'home',
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Home')
-                  : HomeWidget(),
+                  ? const NavBarPage(initialPage: 'Home')
+                  : const HomeWidget(),
             ),
             FFRoute(
               name: 'ProductDetail',
               path: 'productDetail',
-              builder: (context, params) => ProductDetailWidget(),
+              builder: (context, params) => const ProductDetailWidget(),
             ),
             FFRoute(
               name: 'Cart',
               path: 'cart',
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Cart')
-                  : CartWidget(),
+                  ? const NavBarPage(initialPage: 'Cart')
+                  : const CartWidget(),
             ),
             FFRoute(
               name: 'favorite',
               path: 'favorite',
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'favorite')
-                  : FavoriteWidget(),
+                  ? const NavBarPage(initialPage: 'favorite')
+                  : const FavoriteWidget(),
             ),
             FFRoute(
               name: 'Login',
               path: 'login',
-              builder: (context, params) => LoginWidget(),
+              builder: (context, params) => const LoginWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
@@ -269,7 +263,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

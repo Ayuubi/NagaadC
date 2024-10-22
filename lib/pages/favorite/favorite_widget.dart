@@ -1,13 +1,8 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'favorite_model.dart';
 export 'favorite_model.dart';
 
@@ -39,8 +34,8 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
             curve: Curves.elasticOut,
             delay: 0.0.ms,
             duration: 1190.0.ms,
-            begin: Offset(0.0, -34.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -34.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -51,8 +46,8 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
             curve: Curves.elasticOut,
             delay: 0.0.ms,
             duration: 1190.0.ms,
-            begin: Offset(0.0, 51.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 51.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -76,7 +71,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 10.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -84,7 +79,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -107,7 +102,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -123,13 +118,13 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.all(10.0),
+                                  padding: const EdgeInsets.all(10.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Container(
-                                        decoration: BoxDecoration(),
+                                        decoration: const BoxDecoration(),
                                         child: ClipRRect(
                                           borderRadius:
                                               BorderRadius.circular(8.0),
@@ -144,7 +139,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
                                       Expanded(
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 5.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -175,7 +170,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
                                                 ],
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 5.0, 0.0),
                                                 child: Row(
@@ -185,7 +180,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     5.0,

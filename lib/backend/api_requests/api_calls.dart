@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
-import '../schema/structs/index.dart';
 
 import 'package:flutter/foundation.dart';
 
@@ -86,8 +84,8 @@ class OdooAuthenticationCall {
   "method": "call",
   "params": {
     "db": "postgres",
-    "login": "${user}",
-    "password": "${pass}"
+    "login": "$user",
+    "password": "$pass"
   }
 }''';
     return ApiManager.instance.makeApiCall(

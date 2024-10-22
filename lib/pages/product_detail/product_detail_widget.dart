@@ -3,15 +3,10 @@ import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'product_detail_model.dart';
 export 'product_detail_model.dart';
 
@@ -44,15 +39,15 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
             delay: 80.0.ms,
             duration: 1000.0.ms,
             hz: 5,
-            offset: Offset(0.0, 0.0),
+            offset: const Offset(0.0, 0.0),
             rotation: 0.105,
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 80.0.ms,
             duration: 1000.0.ms,
-            begin: Offset(0.0, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.0, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -63,8 +58,8 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 300.0.ms,
-            begin: Offset(0.0, 100.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, 100.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -75,8 +70,8 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.6, 1.0),
-            end: Offset(1.0, 1.0),
+            begin: const Offset(0.6, 1.0),
+            end: const Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -97,14 +92,14 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
-        body: Container(
+        body: SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Stack(
-            alignment: AlignmentDirectional(0.0, -1.0),
+            alignment: const AlignmentDirectional(0.0, -1.0),
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Image.network(
                   'https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
                   width: double.infinity,
@@ -113,7 +108,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 145.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 145.0, 0.0, 0.0),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
                   child: BackdropFilter(
@@ -131,7 +126,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                         width: 300.0,
                         height: 140.0,
                         decoration: BoxDecoration(
-                          color: Color(0x90000000),
+                          color: const Color(0x90000000),
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         child: Row(
@@ -158,9 +153,9 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                 ).animateOnPageLoad(animationsMap['blurOnPageLoadAnimation']!),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -0.87),
+                alignment: const AlignmentDirectional(0.0, -0.87),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -171,7 +166,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                         decoration: BoxDecoration(
                           color:
                               FlutterFlowTheme.of(context).secondaryBackground,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x520E151B),
@@ -210,7 +205,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                             width: 50.0,
                             height: 50.0,
                             decoration: BoxDecoration(
-                              color: Color(0x26FFFFFF),
+                              color: const Color(0x26FFFFFF),
                               borderRadius: BorderRadius.circular(30.0),
                             ),
                           ),
@@ -221,21 +216,21 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 300.0, 0.0, 0.0),
                           child: Container(
                             width: double.infinity,
                             height: 700.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFFF8F7FA),
                               boxShadow: [
                                 BoxShadow(
@@ -255,7 +250,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 12.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -264,12 +259,12 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                     width: 350.0,
                                     height: 80.0,
                                     decoration: BoxDecoration(
-                                      color: Color(0x35A6A6AA),
+                                      color: const Color(0x35A6A6AA),
                                       borderRadius:
                                           BorderRadius.circular(100.0),
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           30.0, 0.0, 30.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -285,7 +280,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 50.0,
                                             child: VerticalDivider(
                                               thickness: 1.0,
@@ -300,7 +295,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                                   letterSpacing: 0.0,
                                                 ),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 50.0,
                                             child: VerticalDivider(
                                               thickness: 1.0,
@@ -321,7 +316,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                   ).animateOnPageLoad(animationsMap[
                                       'containerOnPageLoadAnimation2']!),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 30.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -340,10 +335,10 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 18.0, 0.0, 8.0),
                                     child: FlutterFlowChoiceChips(
-                                      options: [
+                                      options: const [
                                         ChipData('Small'),
                                         ChipData('Medium'),
                                         ChipData('Large')
@@ -367,7 +362,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                         iconColor: Colors.white,
                                         iconSize: 18.0,
                                         labelPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 15.0, 5.0, 15.0, 5.0),
                                         elevation: 41.0,
                                       ),
@@ -377,15 +372,15 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                             .bodySmall
                                             .override(
                                               fontFamily: 'Poppins',
-                                              color: Color(0xCC000000),
+                                              color: const Color(0xCC000000),
                                               fontSize: 18.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.normal,
                                             ),
-                                        iconColor: Color(0xCC000000),
+                                        iconColor: const Color(0xCC000000),
                                         iconSize: 18.0,
                                         labelPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 15.0, 5.0, 15.0, 5.0),
                                         elevation: 4.0,
                                       ),
@@ -404,7 +399,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 30.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -423,7 +418,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -431,7 +426,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                         Expanded(
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 5.0, 40.0, 0.0),
                                             child: Text(
                                               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id ipsum vivamus velit lorem amet. Tincidunt cras volutpat aliquam porttitor molestie. Netus neque, habitasse id vulputate proin cras. Neque, vel duis sit vel pellentesque tempor. A commodo arcu tortor arcu, elit.  Id ipsum vivamus velit lorem amet. Follow me on Instagram: @luizmello.dev hihih =)',
@@ -452,7 +447,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 50.0, 16.0, 0.0),
                                     child: Container(
                                       width: MediaQuery.sizeOf(context).width *
@@ -465,7 +460,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                             BorderRadius.circular(60.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             35.0, 0.0, 35.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -486,7 +481,7 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget>
                                                             FontWeight.normal,
                                                       ),
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 30.0,
                                               child: VerticalDivider(
                                                 thickness: 1.0,
