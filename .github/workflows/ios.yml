@@ -1,0 +1,49 @@
+name: Build iOS App
+
+on:
+  push:
+    branches:
+      - flutterflow
+  pull_request:
+    branches:
+      - flutterflow
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      # Checkout the latest code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Flutter environment
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'stable'
+
+      # Install CocoaPods dependencies for iOS
+      - name: Install CocoaPods
+        run: |
+          cd ios
+          pod install
+        env:
+          FLUTTER_BUILD_NAME: ${{ secrets.FLUTTER_BUILD_NAME }}
+          FLUTTER_BUILD_NUMBER: ${{ secrets.FLUTTER_BUILD_NUMBER }}
+
+      # Get Flutter dependencies
+      - name: Get Flutter dependencies
+        run: flutter pub get
+
+      # Build the iOS app
+      - name: Build iOS
+        run: |
+          flutter build ios --release --no-codesign
+
+      # Upload the built IPA file as an artifact
+      - name: Upload IPA
+        uses: actions/upload-artifact@v2
+        with:
+          name: ipa-file
+          path: build/ios/ipa/
