@@ -43,5 +43,5 @@ jobs:
       - name: Upload IPA
         uses: actions/upload-artifact@v3
         with:
-          name: ipa-file
+          name: nagaad
           path: build/ios/ipa/
