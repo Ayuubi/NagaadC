@@ -21,7 +21,7 @@ jobs:
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.5'  # Use your required version here
+          flutter-version: '3.13.0'  # Use this Flutter version, which includes Dart >=3.1.0
           architecture: ARM64
 
       # Get Flutter dependencies first (this generates the necessary files like Generated.xcconfig)
