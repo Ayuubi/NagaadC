@@ -28,18 +28,15 @@ jobs:
         run: |
           cd ios
           pod install
-        env:
-          FLUTTER_BUILD_NAME: ${{ secrets.FLUTTER_BUILD_NAME }}
-          FLUTTER_BUILD_NUMBER: ${{ secrets.FLUTTER_BUILD_NUMBER }}
 
       # Get Flutter dependencies
       - name: Get Flutter dependencies
         run: flutter pub get
 
-      # Build the iOS app
+      # Build the iOS app with hardcoded build name and build number
       - name: Build iOS
         run: |
-          flutter build ios --release --no-codesign
+          flutter build ios --release --no-codesign --build-name=1.0.0 --build-number=1
 
       # Upload the built IPA file as an artifact
       - name: Upload IPA
