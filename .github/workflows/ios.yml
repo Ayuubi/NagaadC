@@ -33,14 +33,14 @@ jobs:
       - name: Get Flutter dependencies
         run: flutter pub get
 
-      # Build the iOS app with hardcoded build name and build number
+      # Build the iOS app
       - name: Build iOS
         run: |
           flutter build ios --release --no-codesign --build-name=1.0.0 --build-number=1
 
-      # Upload the built IPA file as an artifact
+      # Upload the built IPA file as an artifact using the updated action version
       - name: Upload IPA
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ipa-file
           path: build/ios/ipa/
