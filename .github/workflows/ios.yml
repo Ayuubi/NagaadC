@@ -21,18 +21,18 @@ jobs:
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.5'  # You can replace this with the Flutter version your project requires
+          flutter-version: '3.10.5'  # Use your required version here
           architecture: ARM64
 
-      # Install CocoaPods dependencies for iOS
+      # Get Flutter dependencies first (this generates the necessary files like Generated.xcconfig)
+      - name: Get Flutter dependencies
+        run: flutter pub get
+
+      # Install CocoaPods dependencies for iOS (after flutter pub get)
       - name: Install CocoaPods
         run: |
           cd ios
           pod install
-
-      # Get Flutter dependencies
-      - name: Get Flutter dependencies
-        run: flutter pub get
 
       # Build the iOS app
       - name: Build iOS
