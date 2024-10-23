@@ -84,6 +84,7 @@ dependencies:
   cupertino_icons: ^1.0.0
 
 dependency_overrides:
+  collection: 1.18.0
   http: 1.2.1
   uuid: ^4.0.0
 
@@ -127,8 +128,6 @@ flutter:
     - assets/pdfs/
     - assets/jsons/
 
-
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
@@ -154,4 +153,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
