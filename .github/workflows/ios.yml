@@ -1,47 +1,31 @@
-name: Build iOS App
+name: Build iOS IPA
 
 on:
   push:
     branches:
-      - flutterflow
-  pull_request:
-    branches:
-      - flutterflow
+      - flutterflow  # Update the branch name
 
 jobs:
   build:
     runs-on: macos-latest
 
     steps:
-      # Checkout the latest code from the repository
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      # Set up Flutter environment with a specific version
-      - name: Install Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.13.0'  # Use this Flutter version, which includes Dart >=3.1.0
-          architecture: ARM64
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: "3.22.2"
 
-      # Get Flutter dependencies (this generates the necessary files like Generated.xcconfig)
-      - name: Get Flutter dependencies
-        run: flutter pub get
+    - name: Install dependencies
+      run: flutter pub get
 
-      # Install CocoaPods dependencies for iOS
-      - name: Install CocoaPods
-        run: |
-          cd ios
-          pod install
+    - name: Build IPA
+      run: flutter build ios --release
 
-      # Build the iOS app without code signing
-      - name: Build iOS
-        run: |
-          flutter build ios --release --no-codesign --build-name=1.0.0 --build-number=1
-
-      # Upload the built IPA file as an artifact
-      - name: Upload IPA
-        uses: actions/upload-artifact@v3
-        with:
-          name: nagaad
-          path: build/ios/ipa/Runner.ipa  # Ensure the correct path to the IPA file
+    - name: Upload IPA to GitHub
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-ios
+        path: build/ios/ipa
